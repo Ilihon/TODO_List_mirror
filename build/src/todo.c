@@ -15,3 +15,20 @@ int add_chapter(char Texts[250][250], int N){
 	}
 	return I;
 }
+int edit(char Texts[250][250],int N,int i){
+
+	int I;
+	printf("Пишите(нажмите '\' чтобы выйти): ");
+
+	for(; i < 250; i++){
+		
+		Texts[N][i] = getchar();
+		if(Texts[N][i] == '-') {
+		    I = i;
+		    break;
+		}
+	}
+	return I;
+	
+	
+}

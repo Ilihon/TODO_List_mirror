@@ -24,6 +24,13 @@ int main(int argc, char *argv[]){
 			scanf("%d",&n); 
 			i_buf[n] = add_chapter(Text,n);
 			break;
+		case 2:
+			printf("введите номер раздела(");
+			for(int i = 0; i < 250;i++){
+				if(i_buf[i] != NULL){
+					printf("%d ",i);
+				}
+			}
 	}
 }
 	
