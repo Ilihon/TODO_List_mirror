@@ -34,6 +34,9 @@ int main(int argc, char *argv[]){
 		case 3:
 	    	    save(Text,i_buf);
 		    break;
+		case 4:
+	    	    load(Text,i_buf);
+		    break;
 	}
 }
 	
