@@ -52,3 +52,25 @@ void save(char Texts[250][250],int i_buf[250]){
 	fclose(fp);
 	
 }
+void load(char Texts[250][250],int i[250]){
+		FILE *fp;
+		char o;
+		int n;
+	char name[] = "Save_Text.txt";
+	  if ((fp = fopen(name, "r")) == NULL){
+    	printf("Not open File");
+    	getchar();
+    	return 0;	
+  	  }
+				
+	 for(int k = 0; k < 250;k++){
+		fscanf(fp,"%d",&n);
+		fscanf(fp,"%d",&i[n]);
+		for(int j = 0; j < i[n]; j++){
+			fscanf(fp,"%c",&Texts[n][j]);
+			//if(Texts[n][j] == NULL) break;
+		}
+	}
+	
+	fclose(fp);
+}
