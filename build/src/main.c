@@ -1,9 +1,8 @@
 #include "todo.h"
 
-
 int main(int argc, char *argv[]){
 	char Text[250][250];
-	int i_buf[250];
+	int i_buf[250] = {0};
 	while(1){
 	
 	int enter;
@@ -27,10 +26,18 @@ int main(int argc, char *argv[]){
 		case 2:
 			printf("введите номер раздела(");
 			for(int i = 0; i < 250;i++){
-				if(i_buf[i] != NULL){
+				if(i_buf[i] != 0){
 					printf("%d ",i);
 				}
+			printf("):");
+			scanf("%d",&n);
+			for(int i = 0; i < i_buf[n]; i++){
+				printf("%c",Text[n][i]);
+			}	
+			i_buf[n] = edit(Text,n,i_buf[n]);
+			break;
 			}
+
 		case 3:
 	    	    save(Text,i_buf);
 		    break;
