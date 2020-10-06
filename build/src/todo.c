@@ -4,9 +4,8 @@
 int add_chapter(char Texts[250][250], int N){
 
 	int I;
-	printf("Ïèøèòå(íàæìèòå '\' ÷òîáû âûéòè): ");
+	printf("Пишите(нажмите '\' чтобы выйти): ");
 	for(int i = 0; i < 250; i++){
-		
 		Texts[N][i] = getchar();
 		if(Texts[N][i] == '-') {
 		    I = i;
@@ -14,13 +13,11 @@ int add_chapter(char Texts[250][250], int N){
 		}
 	}
 	return I;
-
-	
 }
 int edit(char Texts[250][250],int N,int i){
 
 	int I;
-	printf("Ïèøèòå(íàæìèòå '\' ÷òîáû âûéòè): ");
+	printf("Пишите(нажмите '\' чтобы выйти): ");
 
 	for(; i < 250; i++){
 		
@@ -34,6 +31,7 @@ int edit(char Texts[250][250],int N,int i){
 	
 	
 }
+
 void save(char Texts[250][250],int i_buf[250]){
 	FILE *fp;
 	char name[] = "Save_Text.txt";
@@ -52,6 +50,7 @@ void save(char Texts[250][250],int i_buf[250]){
 	fclose(fp);
 	
 }
+
 void load(char Texts[250][250],int i[250]){
 		FILE *fp;
 		char o;
