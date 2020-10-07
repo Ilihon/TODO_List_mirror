@@ -6,9 +6,19 @@ FLAG = -Wall
 all : bin/todo
 test  : bin/todo-test
 clean: 
-	rm -rf $(BIN) build/src/*.o  
+	rm -rf build/src/*.o
+	rm -rf build/test/*.o   
+	rm -rf build/test/*.d
+
+
+run:
+	bin/./todo
+testing:
+	bin/./todo-test
+    
 bin/todo: $(OBJ)
 	gcc -std=c99 $(LINKOBJ) -o bin/todo
+	
 bin/todo-test: build/test/todo.o build/test/test-main.o build/test/test.o
 	gcc $(FLAG)   build/test/todo.o build/test/test-main.o build/test/test.o -o bin/todo-test
 
