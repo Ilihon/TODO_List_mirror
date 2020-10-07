@@ -26,3 +26,19 @@ CTEST(Check_load_Texts,as){
 	}
 	ASSERT_EQUAL(0,check);
 }
+CTEST(add_Ch_chek,Chapter){
+	char Text[250][250];
+	int i;
+	int N = 1;
+	i = add_chapter(Text,N);
+	ASSERT_EQUAL(4,i);
+
+}
+CTEST(check_edit,number_word){
+	char Text[250][250];
+	int i[250];
+	int N = 1;
+	i[N] = add_chapter(Text,N);
+	i[N] = edit(Text,N,i[N]);
+	ASSERT_EQUAL(8,i[N]);
+}
