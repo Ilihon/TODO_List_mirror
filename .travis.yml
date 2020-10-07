@@ -4,7 +4,7 @@ dist: xenial
 script:
   - git ls-files src/ | xargs clang-format  && git diff --exit-code
   - make
-  - make-test
+  - make test
   - bin/todo-test
 compiler:
 - gcc
