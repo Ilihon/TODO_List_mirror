@@ -4,7 +4,7 @@
 int add_chapter(char Texts[250][250], int N){
 
 	int I;
-	printf("Пишите(нажмите '\' чтобы выйти): ");
+	printf("Пишите(нажмите '-' чтобы выйти): ");
 	for(int i = 0; i < 250; i++){
 		Texts[N][i] = getchar();
 		if(Texts[N][i] == '-') {
@@ -18,7 +18,7 @@ int edit(char Texts[250][250],int N,int i){
 
 	int I;
 
-	printf("Пишите(нажмите '\' чтобы выйти): ");
+	printf("Пишите(нажмите '-' чтобы выйти): ");
 
 	for(; i < 250; i++){
 		
@@ -66,7 +66,6 @@ int load(char Texts[250][250],int i[250]){
 		fscanf(fp,"%d",&i[n]);
 		for(int j = 0; j < i[n]; j++){
 			fscanf(fp,"%c",&Texts[n][j]);
-			//if(Texts[n][j] == NULL) break;
 		}
 	}
 	
