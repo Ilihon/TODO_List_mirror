@@ -4,21 +4,21 @@
 
 CTEST(find_chapter,Chapter){
 	int check;
-	int i[250] = {0};
-	i[4] = 12;
+	int i_buf[250] = {0};
+	i_buf[4] = 12;
 	for(int i = 0; i < 250;i++){
 		if(i_buf[i] != 0){
 			check = i_buf[i];
 		}
 	}
-	ASSERT_EQUAL(4,check);
+	ASSERT_EQUAL(12,check);
 
 }
 CTEST(check_save_files,as){
 	char Text[250][250];
 	int check;
 	int i_buf[250] = {0};
-	Text[2] = "asd";
+	Text[2][0] = "asd";
 	i_buf[2] = 3;
 	check = save(Text,i_buf);
 	ASSERT_EQUAL(0,check);
